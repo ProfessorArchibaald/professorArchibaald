@@ -5,9 +5,6 @@ services:
     build:
       context: .
       dockerfile: phpFpm/Dockerfile
-      args:
-        - user=${USER}
-        - uid=${UID}
     volumes:
       - ./phpFpm/php.ini:/usr/local/etc/php/php.ini
       - ${CODE_PATH_LOCAL}:${CODE_PATH_CONTAINER}
